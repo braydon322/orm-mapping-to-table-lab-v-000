@@ -19,7 +19,10 @@ class Student
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
   end
 
-  def self.create
+  def self.create(name, album)
+      new_song = Song.new(name, album)
+      new_song.save
+      new_song
   end
 
   def self.create_table
