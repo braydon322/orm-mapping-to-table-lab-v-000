@@ -21,7 +21,7 @@ class Student
 
   def self.create(student_hash)
     binding.pry
-      new_song = Song.new(name, album)
+      new_song = Student.new(student_hash[:name] , student_hash[:grade])
       new_song.save
       new_song
   end
